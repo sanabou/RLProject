@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-12-25 18:28:27 by Eclipse SUMO netedit Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
+
+    <input>
+        <sumocfg-file value="C:\Users\msi\Desktop\Reinforcement\highway_project.sumocfg"/>
+        <route-files value="C:\Users\msi\Desktop\Reinforcement\highway_project.rou.xml"/>
+        <sumo-net-file value="C:\Users\msi\Desktop\Reinforcement\highway_network.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\msi\Desktop\Reinforcement\highway_network.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="0"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.50"/>
+        <rectangular-lane-cut value="0"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="0"/>
+    </pedestrian>
+
+    <netedit>
+        <new-network value="false"/>
+    </netedit>
+
+</configuration>
+-->
+
+<net version="1.16" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-1200.00,-200.00,500.00,0.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <edge id=":J1_0" function="internal">
+        <lane id=":J1_0_0" index="0" speed="8.06" length="3.94" shape="-714.57,-12.37 -713.61,-11.72 -712.87,-11.37 -712.07,-11.23 -710.91,-11.20"/>
+    </edge>
+    <edge id=":J1_1" function="internal">
+        <lane id=":J1_1_0" index="0" speed="13.89" length="4.03" shape="-714.94,-8.00 -710.91,-8.00"/>
+        <lane id=":J1_1_1" index="1" speed="13.89" length="4.03" shape="-714.94,-4.80 -710.91,-4.80"/>
+        <lane id=":J1_1_2" index="2" speed="13.89" length="4.03" shape="-714.94,-1.60 -710.91,-1.60"/>
+    </edge>
+    <edge id=":J2_0" function="internal">
+        <lane id=":J2_0_0" index="0" speed="13.89" length="0.46" shape="-769.47,-51.51 -769.35,-51.47 -769.26,-51.43 -769.18,-51.38 -769.07,-51.30"/>
+    </edge>
+    <edge id=":J4_0" function="internal">
+        <lane id=":J4_0_0" index="0" speed="13.89" length="8.20" shape="-204.00,-11.20 -201.54,-10.70 -200.00,-9.60 -198.46,-8.50 -196.00,-8.00"/>
+        <lane id=":J4_0_1" index="1" speed="13.89" length="8.20" shape="-204.00,-8.00 -196.00,-8.00"/>
+        <lane id=":J4_0_2" index="2" speed="13.89" length="8.20" shape="-204.00,-4.80 -196.00,-4.80"/>
+        <lane id=":J4_0_3" index="3" speed="13.89" length="8.20" shape="-204.00,-1.60 -196.00,-1.60"/>
+    </edge>
+
+    <edge id="after_lights" from="J2" to="J1" priority="-1">
+        <lane id="after_lights_0" index="0" speed="13.89" length="66.98" shape="-769.07,-51.30 -714.57,-12.37"/>
+    </edge>
+    <edge id="after_ramp" from="J1" to="J4" priority="-1">
+        <lane id="after_ramp_0" index="0" speed="13.89" length="506.91" shape="-710.91,-11.20 -204.00,-11.20"/>
+        <lane id="after_ramp_1" index="1" speed="13.89" length="506.91" shape="-710.91,-8.00 -204.00,-8.00"/>
+        <lane id="after_ramp_2" index="2" speed="13.89" length="506.91" shape="-710.91,-4.80 -204.00,-4.80"/>
+        <lane id="after_ramp_3" index="3" speed="13.89" length="506.91" shape="-710.91,-1.60 -204.00,-1.60"/>
+    </edge>
+    <edge id="before_lights" from="J3" to="J2" priority="-1">
+        <lane id="before_lights_0" index="0" speed="13.89" length="455.41" shape="-1199.47,-201.51 -769.47,-51.51"/>
+    </edge>
+    <edge id="before_ramp" from="J0" to="J1" priority="-1">
+        <lane id="before_ramp_0" index="0" speed="13.89" length="485.06" shape="-1200.00,-8.00 -714.94,-8.00"/>
+        <lane id="before_ramp_1" index="1" speed="13.89" length="485.06" shape="-1200.00,-4.80 -714.94,-4.80"/>
+        <lane id="before_ramp_2" index="2" speed="13.89" length="485.06" shape="-1200.00,-1.60 -714.94,-1.60"/>
+    </edge>
+    <edge id="highway_end" from="J4" to="J5" priority="-1">
+        <lane id="highway_end_0" index="0" speed="13.89" length="696.00" shape="-196.00,-8.00 500.00,-8.00"/>
+        <lane id="highway_end_1" index="1" speed="13.89" length="696.00" shape="-196.00,-4.80 500.00,-4.80"/>
+        <lane id="highway_end_2" index="2" speed="13.89" length="696.00" shape="-196.00,-1.60 500.00,-1.60"/>
+    </edge>
+
+    <tlLogic id="ramp_lights" type="static" programID="0" offset="0">
+        <phase duration="40" state="G"/>
+        <phase duration="60" state="r"/>
+    </tlLogic>
+
+    <junction id="J0" type="dead_end" x="-1200.00" y="0.00" incLanes="" intLanes="" shape="-1200.00,0.00 -1200.00,-9.60"/>
+    <junction id="J1" type="priority" x="-700.00" y="0.00" incLanes="after_lights_0 before_ramp_0 before_ramp_1 before_ramp_2" intLanes=":J1_0_0 :J1_1_0 :J1_1_1 :J1_1_2" shape="-710.91,0.00 -710.91,-12.80 -712.00,-12.84 -712.37,-12.92 -712.73,-13.08 -713.13,-13.32 -713.64,-13.67 -715.50,-11.07 -714.52,-10.25 -714.33,-9.97 -714.34,-9.76 -714.54,-9.64 -714.94,-9.60 -714.94,0.00">
+        <request index="0" response="0000" foes="0000" cont="0"/>
+        <request index="1" response="0000" foes="0000" cont="0"/>
+        <request index="2" response="0000" foes="0000" cont="0"/>
+        <request index="3" response="0000" foes="0000" cont="0"/>
+    </junction>
+    <junction id="J2" type="traffic_light" x="-770.00" y="-50.00" incLanes="before_lights_0" intLanes=":J2_0_0" shape="-770.00,-50.00 -768.14,-52.60 -768.42,-52.80 -768.52,-52.86 -768.63,-52.91 -768.76,-52.96 -768.95,-53.02">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="J3" type="dead_end" x="-1200.00" y="-200.00" incLanes="" intLanes="" shape="-1200.00,-200.00 -1198.95,-203.02"/>
+    <junction id="J4" type="priority" x="-200.00" y="0.00" incLanes="after_ramp_0 after_ramp_1 after_ramp_2 after_ramp_3" intLanes=":J4_0_0 :J4_0_1 :J4_0_2 :J4_0_3" shape="-196.00,0.00 -196.00,-9.60 -199.03,-10.43 -200.97,-11.97 -202.21,-12.56 -204.00,-12.80 -204.00,0.00">
+        <request index="0" response="0010" foes="0010" cont="0"/>
+        <request index="1" response="0000" foes="0001" cont="0"/>
+        <request index="2" response="0000" foes="0000" cont="0"/>
+        <request index="3" response="0000" foes="0000" cont="0"/>
+    </junction>
+    <junction id="J5" type="dead_end" x="500.00" y="0.00" incLanes="highway_end_0 highway_end_1 highway_end_2" intLanes="" shape="500.00,-9.60 500.00,0.00"/>
+
+    <connection from="after_lights" to="after_ramp" fromLane="0" toLane="0" via=":J1_0_0" dir="s" state="M"/>
+    <connection from="after_ramp" to="highway_end" fromLane="0" toLane="0" via=":J4_0_0" dir="s" state="m"/>
+    <connection from="after_ramp" to="highway_end" fromLane="1" toLane="0" keepClear="0" via=":J4_0_1" dir="s" state="M"/>
+    <connection from="after_ramp" to="highway_end" fromLane="2" toLane="1" keepClear="0" via=":J4_0_2" dir="s" state="M"/>
+    <connection from="after_ramp" to="highway_end" fromLane="3" toLane="2" keepClear="0" via=":J4_0_3" dir="s" state="M"/>
+    <connection from="before_lights" to="after_lights" fromLane="0" toLane="0" via=":J2_0_0" tl="ramp_lights" linkIndex="0" dir="s" state="O"/>
+    <connection from="before_ramp" to="after_ramp" fromLane="0" toLane="1" via=":J1_1_0" dir="s" state="M"/>
+    <connection from="before_ramp" to="after_ramp" fromLane="1" toLane="2" via=":J1_1_1" dir="s" state="M"/>
+    <connection from="before_ramp" to="after_ramp" fromLane="2" toLane="3" via=":J1_1_2" dir="s" state="M"/>
+
+    <connection from=":J1_0" to="after_ramp" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J1_1" to="after_ramp" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":J1_1" to="after_ramp" fromLane="1" toLane="2" dir="s" state="M"/>
+    <connection from=":J1_1" to="after_ramp" fromLane="2" toLane="3" dir="s" state="M"/>
+    <connection from=":J2_0" to="after_lights" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J4_0" to="highway_end" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J4_0" to="highway_end" fromLane="1" toLane="0" dir="s" state="M"/>
+    <connection from=":J4_0" to="highway_end" fromLane="2" toLane="1" dir="s" state="M"/>
+    <connection from=":J4_0" to="highway_end" fromLane="3" toLane="2" dir="s" state="M"/>
+
+</net>
